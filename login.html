@@ -1,0 +1,37 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/jpg" href="OIP.jpg">
+    <link rel="stylesheet" href="login.css">
+    <title>Log In</title>
+    <script src="./script.js"></script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+   (function(){
+      emailjs.init("o1EKL-PSUByO2N2ev");
+   })();
+    </script>
+</head>
+<body>
+    <video src="./ultimate.mp4" autoplay muted loop></video>
+    <div class="wrapper">
+        <h2>Login</h2>
+        <form>
+            <div class="box">
+                <input type="text" name="name" id="name" required>
+                <label for="name">User Name</label>
+            </div>
+            <div class="box">
+                <input type="password" name="pass" id="pass" required>
+                <label for="pass">Password</label>
+            </div>
+            <input type="submit" name="" value="Submit">
+            <input type="submit" name="" value="Don't Have an Account">
+        </form>
+    </div>    
+</body>
+</html>

@@ -1,0 +1,65 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>            
+    <link rel="icon" type="image/jpg" href="OIP.jpg">
+    <link rel="stylesheet" href="./contact.css">
+    <script src="./script.js"></script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+   (function(){
+      emailjs.init("o1EKL-PSUByO2N2ev");
+   })();
+    </script>
+    <title>Contact Us</title>
+</head>
+<body>
+    <video src="./ultimate.mp4" autoplay muted loop></video>
+    <div class="wrapper">
+        <h2>Login</h2>
+        <form action="https://formsubmit.co/helen.uos22.034@gmail.com" method="POST">
+            <div class="box">
+                <input type="text" name="name" id="name" required>
+                <label for="name">Full Name</label>
+            </div>
+            <div class="box">
+                <input type="email" name="pass" id="pass" required>
+                <label for="pass">E-mail</label>
+            </div>
+            <div class="box">
+                <h5 for="message">Message</h5>
+                <textarea id="message" rows="3" class="form-control"></textarea>
+            </div>
+            <div class="submit">
+              <button type="submit" name="" value="Submit" onclick="sendMail()">Submit</button>  
+            </div>
+        </form> 
+        <div class="icons">
+            <a href="#"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+            <a href="#"><i class="fa fa-instagram"></i></a>
+            <a href="#"><i class="fa fa-youtube"></i></a>
+        </div>
+    </div>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+        function sendEmail(){
+            Email.send({
+            Host : "smtp.gmail.com",
+            Username : "username",
+            Password : "password",
+            To : 'helen.uos22.034@gmail.com',
+            From : document.getElementById("email").value,
+            Subject : "This is the subject",
+            Body : "And this is the body"
+        }).then(
+            message => alert(message)
+        );
+        }
+    </script>
+</body>
+</html>
